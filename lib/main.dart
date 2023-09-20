@@ -12,6 +12,7 @@ import 'package:fresume_app/global/widgets/loading.dart';
 import 'package:fresume_app/pages/home/view/home_view.dart';
 import 'package:fresume_app/pages/unknown/unknown_route.dart';
 import 'package:get/get.dart';
+// import 'package:responsive_framework/responsive_framework.dart';
 import 'package:url_strategy/url_strategy.dart';
 
 
@@ -33,17 +34,21 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: "Fresume",
       debugShowCheckedModeBanner: false,
-      builder: (context, widget) => ResponsiveWrapper.builder(
-        widget!,
-        background: Container(
-          color: Colors.grey.shade50,
-        ),
+      // builder: (context, widget) => ResponsiveWrapper.builder(
+      //   widget!,
+      //   background: Container(
+      //     color: Colors.grey.shade50,
+      //   ),
       
-        defaultScale: true,
-        breakpoints: const [
-        
-        ],
-      ),
+      //   defaultScale: true,
+      //   breakpoints: const [
+      //   //   ResponsiveBreakpoint.resize(450, name: MOBILE),
+      //   //   ResponsiveBreakpoint.autoScale(800, name: TABLET),
+      //   //   ResponsiveBreakpoint.autoScale(1000, name: TABLET),
+      //   //   ResponsiveBreakpoint.resize(1200, name: DESKTOP),
+      //   //   ResponsiveBreakpoint.autoScale(2460, name: "4K"),
+      //   ],
+      // ),
       theme: lightThemeDta,
       initialRoute: '/',
       unknownRoute: GetPage(name: '/error', page: () => const UnknownRoute()),
